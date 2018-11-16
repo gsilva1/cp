@@ -1,0 +1,234 @@
+/* FONTS */
+@font-face {
+  font-family: opensans;
+  src: url("fonts/OpenSans-Regular.ttf");
+}
+
+/* ---------------------------------------- */
+*{
+  font-family: arial, "times new roman", sans-serif;
+}
+body, html{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* ------------- LOGIN ----------------- */
+.login-body{
+  background-color: orange;
+}
+.login-center-box{
+  width: 40%;
+  height: 250px;
+  margin: 50px 30% 0;
+  border: 2px solid #0D4B6E;
+  border-radius: 10px;
+  background: white
+}
+.login-center-box img{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  margin-top: 20px;
+  margin-left: -50px
+}
+.login-center-box h1{
+  text-align: center;
+  font-size: 16px;
+}
+.login-center-box input{
+  display: block;
+  margin: 8px auto
+}
+
+/* ------------- MAIN ----------------- */
+.main-body{
+  background-color: #F1F1F4;
+}
+.main-left-panel{
+  width: 10%;
+  height: 100%;
+
+  position: relative;
+  float: left;
+  margin: 0;
+  background: #666;
+  border-right: 2px solid lightgray;
+  box-sizing: border-box;
+}
+.main-top-panel{
+  height:10%;
+  width: 90%;
+  min-height: 60px;
+  position: relative;
+  float: left;
+  top: 0;
+  background: #666;
+  margin: 0;
+  box-sizing: border-box;
+  border: 2px solid lightgray;
+  border-top: 0
+}
+.main-body iframe{
+  background-color: #fff;
+  width: 90%;
+  height: 89%;
+  border: 0;
+}
+.main-top-panel img{
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  margin-left: -40px;
+  margin-top: 5px;
+  position: relative;
+}
+
+.main-left-panel a img{
+  /* margin: 0 auto; */
+  position: relative;
+  left: 50%;
+  margin-left: -24px
+}
+.main-left-panel a{
+  display: block;
+  margin: 0 auto;
+  padding: 30px;
+}
+.main-left-panel a:clicked{
+  text-decoration: none;
+}
+.main-left-panel a:visited{
+  text-decoration: none;
+}
+.main-left-panel a:hover{
+  background-color: #FFA135
+}
+.main-left-panel a{
+  text-decoration: none;
+}
+.main-left-panel a p{
+  text-align: center;
+  margin: 0;
+  color: white;
+}
+
+/* iFrames */
+.iframe-welcome-body{
+  width: auto;
+  height: auto;
+}
+.iframe-welcome-message{
+  position: absolute;
+  width: 600px;
+  height: 300px;
+  left: 50%;
+  background: teal;
+  margin-left: -300px;
+  margin-top: 80px;
+  font-size: 28px;
+  text-align: center;
+  display: block;
+}
+.iframe-title{
+  position: relative;
+  float: left;
+  margin: 0;
+  border-bottom: 1px solid black;
+  font-weight: bold
+}
+.iframe-title p{
+  margin: 5px
+}
+.iframe-table{
+  position: absolute;
+  width: 46%;
+  height: auto;
+  margin: 10% 25%;
+  border-collapse: collapse;
+
+}
+.iframe-table tr th{
+  width: 10%;
+  text-align: left;
+  padding: 10px
+}
+.iframe-table tr td{
+  width: 90%;
+  text-align: left;
+  padding: 10px
+}
+.iframe-table tr td input{
+  width: 100%;
+
+}
+.iframe-table tr td #submit{
+  width: 10% !important;
+  float: right;
+
+}
+.iframe-table-list-posts{
+  position: absolute;
+  width: 80%;
+  height: auto;
+  margin: 10% 10%;
+  border-collapse: collapse;
+}
+
+.iframe-table-list-posts thead tr th{
+  border: 1px solid black;
+  padding: 5px;
+  background-color: #0D4B6E;
+  color: white
+}
+.iframe-table-list-posts thead tr th:first-child{
+  width: 20%;
+}
+.iframe-table-list-posts thead tr th:nth-child(2){
+  width: 40%;
+}
+.iframe-table-list-posts thead tr th:nth-child(3){
+  width: 15%;
+}
+.iframe-table-list-posts thead tr th:last-child{
+  width: 10%;
+}
+.iframe-table-list-posts tbody tr td{
+  border: 1px solid black;
+  padding: 5px
+}
+.iframe-table-list-posts tbody tr td a img{
+  width: 30px;
+  margin: 0 5px;
+
+
+
+}
+.iframe-table-list-posts tbody tr td a{
+  text-decoration: none;
+  position: relative;
+}
+
+.iframe-delete-post-box{
+  border: 1px solid black;
+  width: 350px;
+  height: 200px;
+  padding: 20px;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.iframe-delete-post-box form input:first-child{
+  margin-top: 70px;
+  float: left;
+  padding: 2px 45px
+}
+.iframe-delete-post-box form input:last-child{
+  margin-top: 70px;
+  float: right;
+  padding: 2px 45px
+}
