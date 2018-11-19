@@ -1,11 +1,7 @@
 <?php
-// define('DB_HOST', 'br386.hostgator.com.br');
-// define('DB_USER', 'instit12');
-// define('DB_PASSWORD', 'CjR*$t8h90');
-// define('DB_DATABASE', 'instit12_wp462');
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'zip123');
 define('DB_DATABASE', 'instit12_wp462');
 define('USER_TIMEOUT', 10);
 error_reporting(E_ALL);
