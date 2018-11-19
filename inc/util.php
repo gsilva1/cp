@@ -3,7 +3,11 @@ define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASSWORD', 'zip123');
 define('DB_DATABASE', 'instit12_wp462');
-define('USER_TIMEOUT', 10);
+define('USER_TIMEOUT', 9999);
+define('FILES_PATH', '/var/www/html/cp/post_images/');
+
+
+
 error_reporting(E_ALL);
 
 function alertThat($msg){
