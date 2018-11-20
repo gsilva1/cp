@@ -44,6 +44,7 @@ body, html{
 /* ------------- LOGIN ----------------- */
 .login-body{
   background-color: white;
+  height: 92.2%
 }
 .login-center-box{
   width: 40%;
@@ -96,6 +97,12 @@ body, html{
   box-sizing: border-box;
   border: 2px solid #2F6486;
   border-top: 0
+}
+.main-top-panel a{
+  text-decoration: none;
+  float: right;
+  color: white;
+  margin: 4.6% 1% 0 0;
 }
 .main-body iframe{
   background-color: #fff;

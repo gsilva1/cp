@@ -28,6 +28,7 @@ if($_SESSION['user_active']){
       </div>
       <div class="main-top-panel">
         <img src="img/logo.png" onclick="location='main.php'" alt="">
+        <a href="logout.php">Logout</a>
       </div>
       <iframe src="<?php $link = isset($l) ?  'iframes/'.$l.'.php' : "iframes/welcome.php"; echo $link?> "> Seu navegador não suporta iFrames. </iframe>
     </div>
