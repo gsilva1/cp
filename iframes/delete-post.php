@@ -7,10 +7,19 @@ $pResposta = $_POST['submit'];
 
 if($pResposta == "Sim"){
   $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE) or die(mysql_error());
+
+  $result = $conn->prepare("select inserido_em from cp_posts where id = ?");
+  $result->bind_param('i', $gPostId);
+  $result->bind_result($inseridoEm);
+  $result->execute();
+  $result->fetch();
+  $result->close();
+  $apagarPasta =  'post_'.$gPostId.'_'.substr($inseridoEm, 0, 10);
+  $pasta = FILES_PATH.$apagarPasta;
+  removeDirectory($pasta);
   $result = $conn->prepare("delete from cp_posts where id = ?");
   $result->bind_param('i', $gPostId);
   $result->execute();
-  //$result->fetch();
   scriptThat('alert("Post deleteado com sucesso!"); location.href="list-posts.php"');
 }else if($pResposta == "Não"){
   header("Location: list-posts.php");

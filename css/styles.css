@@ -8,12 +8,37 @@
 *{
   font-family: arial, "times new roman", sans-serif;
 }
+.todo{
+  position: relative;
+  margin: 0 auto;
+  width: 800px;
+  min-height: 800px;
+  background: lightyellow;
+
+}
 body, html{
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   position: relative;
+}
+.footer-index, .footer-main{
+  width: 100%;
+  height: 25px;
+  background: linear-gradient(to bottom, #2F6486 20%, #0A3F5C 70%);
+  color: white;
+  text-align: center;
+  line-height: 2.3em;
+  font-size: 10px;
+}
+.footer-index{
+  position: absolute;
+  bottom: 0px;
+}
+.footer-main{
+  position: relative;
+  bottom: -37px;
 }
 
 /* ------------- LOGIN ----------------- */
@@ -22,7 +47,7 @@ body, html{
 }
 .login-center-box{
   width: 40%;
-  height: 250px;
+  height: 280px;
   margin: 50px 30% 0;
   border: 2px solid #0D4B6E;
   border-radius: 10px;
@@ -50,34 +75,36 @@ body, html{
   background-color: #F1F1F4;
 }
 .main-left-panel{
-  width: 10%;
+  position: absolute;
+  width: 12%;
   height: 100%;
-
-  position: relative;
-  float: left;
+  top: 7%;
   margin: 0;
-  background: #666;
-  border-right: 2px solid lightgray;
+  background: #0A3F5C;
+  border-right: 2px solid #2F6486;
   box-sizing: border-box;
 }
 .main-top-panel{
   height:10%;
-  width: 90%;
+  width: 100%;
   min-height: 60px;
   position: relative;
   float: left;
   top: 0;
-  background: #666;
+  background: #0A3F5C;
   margin: 0;
   box-sizing: border-box;
-  border: 2px solid lightgray;
+  border: 2px solid #2F6486;
   border-top: 0
 }
 .main-body iframe{
   background-color: #fff;
-  width: 90%;
-  height: 89%;
+  width: 88%;
+  height: 100%;
+  position: absolute;
   border: 0;
+  left: 12%;
+  top: 7.7%
 }
 .main-top-panel img{
   width: 50px;
@@ -117,6 +144,7 @@ body, html{
   color: white;
 }
 
+
 /* iFrames */
 .iframe-welcome-body{
   width: auto;
@@ -127,7 +155,6 @@ body, html{
   width: 600px;
   height: 300px;
   left: 50%;
-  background: teal;
   margin-left: -300px;
   margin-top: 80px;
   font-size: 28px;
@@ -145,10 +172,9 @@ body, html{
   margin: 5px
 }
 .iframe-table{
-  position: absolute;
-  width: 46%;
+  position: relative;
+  width: 100%;
   height: auto;
-  margin: 10% 25%;
   border-collapse: collapse;
 
 }
@@ -163,7 +189,8 @@ body, html{
   padding: 10px
 }
 .iframe-table tr td input{
-  width: 100%;
+  width: 400px
+
 
 }
 .iframe-table tr td #submit{
@@ -173,15 +200,15 @@ body, html{
 }
 .iframe-table-list-posts{
   position: absolute;
-  width: 80%;
+  width: 90%;
   height: auto;
-  margin: 10% 10%;
+  margin: 7% 5%;
   border-collapse: collapse;
 }
-
 .iframe-table-list-posts thead tr th{
   border: 1px solid black;
   padding: 5px;
+  font-size: 11px;
   background-color: #0D4B6E;
   color: white
 }
@@ -192,21 +219,25 @@ body, html{
   width: 40%;
 }
 .iframe-table-list-posts thead tr th:nth-child(3){
-  width: 15%;
+  width: 20%;
 }
 .iframe-table-list-posts thead tr th:last-child{
   width: 10%;
 }
 .iframe-table-list-posts tbody tr td{
   border: 1px solid black;
-  padding: 5px
+  padding: 5px;
+  font-size: 11px;
 }
-.iframe-table-list-posts tbody tr td a img{
-  width: 30px;
-  margin: 0 5px;
-
-
-
+.iframe-table-list-posts tbody tr td a:first-child img{
+  width: 20px;
+  margin-left: 5px;
+  padding-right: 5px;
+  border-right: 1px solid gray;
+}
+.iframe-table-list-posts tbody tr td a:last-child img{
+  width: 20px;
+  margin-left: 2px;
 }
 .iframe-table-list-posts tbody tr td a{
   text-decoration: none;
@@ -218,8 +249,9 @@ body, html{
   width: 350px;
   height: 200px;
   padding: 20px;
-  position: relative;
-  margin: 0 auto;
+  position: absolute;
+  margin: 60px 0 0 50%;
+  left: -175px;
   border-radius: 10px;
 }
 .iframe-delete-post-box form input:first-child{

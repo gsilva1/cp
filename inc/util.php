@@ -5,10 +5,8 @@ define('DB_PASSWORD', 'zip123');
 define('DB_DATABASE', 'instit12_wp462');
 define('USER_TIMEOUT', 9999);
 define('FILES_PATH', '/var/www/html/cp/post_images/');
+error_reporting(0);
 
-
-
-error_reporting(E_ALL);
 
 function alertThat($msg){
   echo "<script>alert('".$msg."')</script>";
@@ -40,5 +38,16 @@ function allowView(){
     header("Location: ../index.php");
   }
 }
+
+function removeDirectory($path) {
+  //ex. removeDirectory('/path/to/directory');
+  $files = glob($path . '/*');
+	foreach ($files as $file) {
+		is_dir($file) ? removeDirectory($file) : unlink($file);
+	}
+	rmdir($path);
+ 	return;
+}
+
 
 ?>

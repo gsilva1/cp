@@ -18,6 +18,15 @@ allowView();
     <div class="iframe-title">
       <p>Listar posts</p>
     </div>
+    <?php
+    $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE) or die(mysql_error());
+    $result = $conn->prepare("select count(*) from cp_posts");
+    $result->execute();
+    $result->bind_result($count);
+    $result->fetch();
+    $result->close();
+    if($count > 0){
+    ?>
       <table class="iframe-table-list-posts">
         <thead>
           <tr>
@@ -29,7 +38,7 @@ allowView();
         </thead>
         <tbody>
         <?php
-        $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE) or die(mysql_error());
+
         $result = $conn->prepare("select * from cp_posts order by inserido_em desc");
         //$result->bind_param('ss', $pTitulo, $pDescricao);
         $result->execute();
@@ -53,5 +62,10 @@ allowView();
 
 
       </table>
+<?php
+    }else{
+      echo "<br><br><br><h4>Não há posts disponíveis para serem exibidos.<br>Adicione algum post.</h4>";
+    }
+    ?>
   </body>
 </html>

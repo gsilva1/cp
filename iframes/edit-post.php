@@ -52,15 +52,11 @@ if(isset($pTitulo) && isset($pDescricao)){
         </tr>
         <tr>
           <th> Descrição </th>
-          <td> <textarea name="descricao" rows="8" cols="80"><?= $descricaoAtual ?></textarea> </td>
-        </tr>
-        <tr>
-          <th> Selecionar imagens </th>
-          <td> <input type="file" name="img" value=""> </td>
+          <td> <textarea name="descricao" rows="8" cols="50"><?= $descricaoAtual ?></textarea> </td>
         </tr>
         <tr>
           <th> </th>
-          <td> <input id="submit" type="submit" name="" value="Editar!"> </td>
+          <td> <input  type="submit" name="" value="Editar!"> </td>
         </tr>
       </table>
     </form>

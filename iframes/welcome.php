@@ -15,7 +15,7 @@ allowView();
       <p>Bem-vindo!</p>
     </div>
     <div class="iframe-welcome-message">
-      <h1>BEM-VINDO  </h1>
+      <h2>SISTEMA DE POSTS<BR>WEBSITE LIKE </h2>
 
     </div>
   </body>

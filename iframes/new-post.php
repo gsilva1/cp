@@ -40,6 +40,7 @@ if(isset($_POST['submit'])){
       $result->execute();
       $result->bind_result($id, $inseridoem);
       $data = $result->fetch();
+      $result->close();
 
       $novaPasta =  'post_'.$id.'_'.substr($inseridoem, 0, 10).'/';
 
@@ -51,11 +52,11 @@ if(isset($_POST['submit'])){
       $dir = $pasta;
       $oldmask = umask(0);
       mkdir($dir, 0777);
-      /* ------------ CRIA UM INDEX.PHP PARA EVITAR ACESSO INDEVIDO AOS ARQUIVOS ------------
+      /* ------------ CRIA UM INDEX.PHP PARA EVITAR ACESSO INDEVIDO AOS ARQUIVOS ------------ */
       $fp = fopen($dir.'/index.php', 'w');
-      fwrite($fp, '<?php header("Location: https://www.institutolike.com.br"); ?>');
+      fwrite($fp, '<?php header("Location: https://www.instituto.com.br"); ?>');
       fclose($fp);
-      ------------------------------------------------------------------------------------ */
+      /* ------------------------------------------------------------------------------------ */
       umask($oldmask);
       // ------------ / CRIA PASTA -------------------
       if($arquivo != FALSE){
@@ -65,6 +66,10 @@ if(isset($_POST['submit'])){
             $sucess = 1;
           }
           else{
+            $result = $conn->prepare("delete from cp_posts where id = ?");
+            $result->bind_param('i', $id);
+            $result->execute();
+            $data = $result->fetch();
             echo "<script>alert('Falha ao enviar!'); history.go(-1);</script>";
           }
         }
@@ -74,7 +79,7 @@ if(isset($_POST['submit'])){
       }
       unset($_POST['enviar']);
       alertThat("Post adicionado com sucesso!");
-      scriptThat("location='welcome.php'");
+      scriptThat("location='list-posts.php'");
     }
   }
 }
@@ -126,7 +131,7 @@ if(isset($_POST['submit'])){
       </tr>
       <tr>
         <th> Descrição </th>
-        <td> <textarea name="descricao" rows="8" cols="80"></textarea> </td>
+        <td> <textarea name="descricao" rows="8" cols="50"></textarea> </td>
       </tr>
       <tr>
         <th> Selecionar imagens </th>

@@ -38,14 +38,15 @@ unset($_POST['user'], $_POST['passwd']);
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
   </head>
   <body class="login-body">
-    <div class="login-center-box">
-      <img src="img/logo.png" alt="">
-      <h1>LIKE Control Panel</h1>
-      <form class="login-form" action="index.php" method="post">
-        <input type="text" name="user" maxlength="8" placeholder="Usuário" autofocus>
-        <input type="password" name="passwd" maxlength="8" placeholder="Senha">
-        <input type="submit" name="submit" value="Entrar">
-      </form>
-    </div>
+      <div class="login-center-box">
+        <img src="img/logo.png" alt="">
+        <h1>LIKE Control Panel</h1>
+        <form class="login-form" action="index.php" method="post">
+          <input type="text" name="user" maxlength="8" placeholder="Usuário" autofocus>
+          <input type="password" name="passwd" maxlength="8" placeholder="Senha">
+          <input type="submit" name="submit" value="Entrar">
+        </form>
+      </div>
+      <div class="footer-index">Versão 1.0</div>
   </body>
 </html>
