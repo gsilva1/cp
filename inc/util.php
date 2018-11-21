@@ -1,11 +1,12 @@
 <?php
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
-define('DB_PASSWORD', 'zip123');
+define('DB_PASSWORD', '123');
 define('DB_DATABASE', 'instit12_wp462');
-define('USER_TIMEOUT', 300);
-define('FILES_PATH', '/var/www/html/cp/post_images/');
-error_reporting(0);
+// define('USER_TIMEOUT', 300);
+define('USER_TIMEOUT', 999999);
+define('FILES_PATH', '/var/www/html/LIKE/cp/post_images/');
+error_reporting(E_ALL);
 
 
 function alertThat($msg){

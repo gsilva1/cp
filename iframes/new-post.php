@@ -54,7 +54,7 @@ if(isset($_POST['submit'])){
       mkdir($dir, 0777);
       /* ------------ CRIA UM INDEX.PHP PARA EVITAR ACESSO INDEVIDO AOS ARQUIVOS ------------ */
       $fp = fopen($dir.'/index.php', 'w');
-      fwrite($fp, '<?php header("Location: https://www.instituto.com.br"); ?>');
+      fwrite($fp, '<?php header("Location: https://www.institutolike.com.br"); ?>');
       fclose($fp);
       /* ------------------------------------------------------------------------------------ */
       umask($oldmask);
@@ -70,7 +70,8 @@ if(isset($_POST['submit'])){
             $result->bind_param('i', $id);
             $result->execute();
             $data = $result->fetch();
-            echo "<script>alert('Falha ao enviar!'); history.go(-1);</script>";
+            echo "<script>alert('Falha ao enviar!')</script>";
+            //scriptThat("location='list-posts.php'");
           }
         }
       }
